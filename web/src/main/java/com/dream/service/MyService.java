@@ -2,6 +2,7 @@ package com.dream.service;
 
 import com.dream.bean.MoneyRecord;
 import com.dream.bean.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +16,10 @@ import java.util.List;
 
 @Service
 public class MyService {
+
+    @Autowired
+    private TestInterface testInterface;
+
     public List selStuList(){
         Student student = new Student();
         student.setId(1);
@@ -77,5 +82,9 @@ public class MyService {
 
         }
         return new PageImpl(list.subList(page.getOffset(),page.getPageSize()),page,20);
+    }
+
+    public List selStu(){
+        return testInterface.getStudent();
     }
 }
