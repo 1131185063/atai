@@ -1,0 +1,12 @@
+com\dream\config\ExceptionResolver.class
+com\dream\config\Global.class
+com\dream\config\SwaggerConfig.class
+com\dream\config\Result.class
+com\dream\interceptor\LoginInterceptor.class
+com\dream\service\MyService.class
+com\dream\bean\MoneyRecord.class
+com\dream\controller\ImageController.class
+com\dream\interceptor\LogAop.class
+com\dream\bean\Student.class
+com\dream\config\ResultUtils.class
+com\dream\service\ImageInterface.class
