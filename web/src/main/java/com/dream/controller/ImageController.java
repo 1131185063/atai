@@ -27,19 +27,4 @@ public class ImageController {
         }
         return urlList;
     }
-
-    @ApiOperation(value = "批量重命名")
-    @RequestMapping(value = "/renameImageName",method = RequestMethod.GET)
-    public void renameImageName(){
-        String dir = "/home/ftp/data";
-        File file = new File(dir);
-        String[] fileName = file.list();
-        Integer number = fileName.length;
-        File[] newFile = new File[number];
-        for(int i=0; i<number; i++) {
-            System.out.println("第"+(i+1)+"个文件名" + ":" + fileName[i]);    //查看所有文件
-            newFile[i] = new File(dir+fileName[i]);
-            FileUtils.re
-        }
-    }
 }

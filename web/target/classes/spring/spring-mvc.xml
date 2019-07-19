@@ -18,11 +18,4 @@
     <mvc:default-servlet-handler/>
     <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true"/>
     <context:property-placeholder location="classpath:application.properties"/>
-
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <bean class="com.dream.interceptor.LoginInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
 </beans>
