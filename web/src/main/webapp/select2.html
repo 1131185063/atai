@@ -8,23 +8,26 @@
     <script src="./js/select2.min.js"></script>
 </head>
 <body>
-    <div>
-        <select class="singleSelect" style="width: 200px; " multiple = "multiple">
-            <option value="0">--请选择--</option>
-            <option id="ali" value="1">阿里</option>
-            <option id="ayi" value="2">阿姨</option>
-            <option id="jiangnan" value="3">江南</option>
-            <option id="hangzhou" value="4">杭州</option>
-            <option id="wuxi" value="5">无锡</option>
-            <option id="shanghai" value="6">上海</option>
-        </select>
+    <div class="list">
+        <li id="1" title="a b c">是</li>
+        <li id="2" title="b c d">否</li>
+        <li id="3" title="c d e">是</li>
+        <li id="4" title="d e f">否</li>
     </div>
     <button id="but" onclick="save(1)">点击请求按钮（向后台发送ajax）</button>
 
     <script type="text/javascript">
-        $(function(){
-            console.log("催收及清收"!="催收及清收");
-            console.log("22"!="33");
+        $(document).ready(function(){
+            var res=$("#c01-select").select2("data")[0] ; //单选
+            var reslist=$("#c01-select").select2("data");    //多选
+            if(res==undefined)
+            {
+                alert("你没有选中任何项");
+            }
+            if(reslist.length)
+            {
+                alert("你选中任何项");
+            }
         });
     </script>
 </body>

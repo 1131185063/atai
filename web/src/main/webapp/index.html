@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <body>
-    <h1>我的第一个标题</h1>
-    <p>我的第一个段落</p>
-hello world!
-    <script>
-        $(function(){
-            var a = {name:"xiaoming",age:"12",sex:"man",lalal:"aaa",xieiwqo:"111"};
-            var b = {name:"xiaoli",tttt:"13",sex:"woman",age:"sasd",luaniw:"mmmm"};
-            var arrs = [];
-            arrs.push(a);
-            arrs.push(b);
-            // var newArrs = [];
-            // for(var i=0;i<arrs.length;i++){
-            //     var obj = arrs[i];
-            //     delete obj.sex;
-            //     newArrs.push(obj);
-            // }
-            // console.log(newArrs);
-            var newArrs = [];
-            for(var i=0;i<arrs.length;i++){
-                var name = arrs[i].name;
-                var age = arrs[i].age;
-                var sex = arrs[i].sex;
-                var obj = {name:name,age:age,sex:sex};
-                newArrs.push(obj);
-            }
-            console.log(newArrs);
-        });
-    </script>
+<div id="example"></div>
+<script type="text/babel">
+    ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+    );
+</script>
 </body>
 </html>
